@@ -21,6 +21,7 @@ public class Sem2Rec8 {
             }
             System.out.println("\nSum of positive even numbers ~ " + sum + "\n");
             System.out.println("\nProduct of single digit positive numbers ~ " + prod + "\n");
+            
         }
     }
 }

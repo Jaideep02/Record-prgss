@@ -24,6 +24,8 @@ public class Sem2Rec1 {
                 a=a+e;
         }
         System.out.println("Sentence entered : " +j);
-        System.out.println("Sentence in toggle case is : "+a);
+        System.out.println("Element".startsWith("e")
+        );
+
     }
 }

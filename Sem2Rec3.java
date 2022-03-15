@@ -19,8 +19,7 @@ public class Sem2Rec3 {
                 newsent = newsent + " " + word;
                 word = "";
             }
-
-            System.out.println("The string with reversed characters in each word is \n" + newsent);
         }
+        System.out.println("The string with reversed characters in each word is \n" + newsent);
     }
 }
