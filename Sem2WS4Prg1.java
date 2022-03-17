@@ -1,27 +1,30 @@
 import java.util.*;
+
 public class Sem2WS4Prg1 {
-   public static void main(String args[]){
-    Scanner in = new Scanner(System.in);
-    int i = 0; 
-    int arr[] = new int[28]; 
-    System.out.println("Enter the temperatures of 28 days in the month of Feb");
-    for(i=0; i<28; i++)
-        arr[i] = in.nextInt();
+    public static void main(String args[]) {
+        try (Scanner in = new Scanner(System.in)) {
+            double arr[] = new double[28];
 
-    int hd = arr[0];
-    int cd = arr[0];
-    double avg = 0;
-    for(i=1; i<28; i++){
-        if(arr[i] > hd)
-            hd = i;
-        else if(arr[i] < cd)
-            cd = i;
+            System.out.println("Enter Feb daily temperatures:");
+            for (int i = 0; i < 28; i++) {
+                arr[i] = in.nextDouble();
+            }
 
-        avg += arr[i];
+            double avg = 0.0;
+            int l = 0, h = 0;
+            for (int i = 0; i < 28; i++) {
+                if (arr[i] < arr[l])
+                    l = i;
+
+                if (arr[i] > arr[h])
+                    h = i;
+
+                avg += arr[i];
+            }
+
+            System.out.println("Hottest day = " + (h + 1));
+            System.out.println("Coldest day = " + (l + 1));
+            System.out.println("Average Temperature = " + (avg/28));
+        }
     }
-    avg = avg/28;
-    System.out.println("Average ~ "+avg);
-    System.out.println("Coldest day ~ "+(cd+1));
-    System.out.println("Hottest day ~ "+(hd+1));
-   }    
 }
